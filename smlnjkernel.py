@@ -38,7 +38,7 @@ class SMLNJKernel(Kernel):
     def _start_smlnj(self):
         sig = signal.signal(signal.SIGINT, signal.SIG_DFL)
         try:
-            self.smlnjwrapper = replwrap.REPLWrapper("sml", "- ", None)
+            self.smlnjwrapper = replwrap.REPLWrapper("sml", "\n- ", None)
         finally:
             signal.signal(signal.SIGINT, sig)
 
